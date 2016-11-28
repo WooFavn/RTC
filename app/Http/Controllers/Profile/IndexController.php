@@ -24,6 +24,7 @@ class IndexController extends MainController
     {
         $user = User::find(Auth::id());
         $this->type = User::find(Auth::id());
+
         if($this->type == 'performer') {
             $this->person = Performer::find($user['id']);
         } elseif($this->type == 'member') {
@@ -32,6 +33,8 @@ class IndexController extends MainController
     }
     public function index()
     {
+        var_dump($this->type);
+        die();
         $result = $this->type;
         return view('profile/index')->with('profile', $result );
     }

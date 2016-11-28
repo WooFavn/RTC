@@ -2,6 +2,6 @@
 
 @section('content')
     <div>
-        <h1>Profile : {{ $profile }}</h1>
+        <h1>Profile dasdsadaa: {{ $profile }}</h1>
     </div>
 @endsection
