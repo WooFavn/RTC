@@ -42,4 +42,12 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Models\Member');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function country()
+    {
+        return $this->belongsTo('App\Models\Country');
+    }
 }

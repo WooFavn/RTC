@@ -23,4 +23,10 @@ class GirlsController extends MainController
         $result = $this->girls->getActivePerformer($this->type);
         return view('all')->with('list', $result);
     }
+
+    public function room($name)
+    {
+        $thisPerf = Performer::where('name', $name)->firstOrFail();
+        return view('performer/room')->with('performer', $thisPerf);
+    }
 }
